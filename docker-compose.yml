@@ -1,0 +1,12 @@
+services:
+  api:
+    container_name: neurium_api
+    build: ./services/api
+    ports:
+     - "3000:3000"
+    env_file:
+      - ./config/.env
+  file_manager:
+    container_name: neurium_file_manager
+    build: ./services/file_manager
+
